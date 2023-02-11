@@ -1,13 +1,5 @@
 from django.views.generic import TemplateView
 
-
-# class Role(models.model):
-#    name = models.CharField(...)
-
-# class Person(models.model):
-#     user = models.OneToOne(User, ...)
-#     roles = models.ManyToMany(Role, related_name="persons", ..)
-
 class IndexView(TemplateView):
     template_name = 'index.html'
 
