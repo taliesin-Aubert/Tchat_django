@@ -3,6 +3,14 @@
 {% block title %}DjangoTchat{% endblock %}
 
 {% block body_content %}
+    <ul>
+        {% for message in object.Msg_Tchat.all %}
+            <li>
+                {{ message }}
+            </li>
+        {% endfor %}
+    </ul>
+
     <form action="" method="post">
         {% csrf_token %}
         <div>{{ form.user.label }}</div>

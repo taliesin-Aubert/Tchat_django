@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path
 
 from recipes.views.index import IndexView
+from recipes.views.json.message_list import MessageView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name='index'),
+    path('', MessageView.as_view(), name='MessageView_json')
 ]
